@@ -1,0 +1,36 @@
+<section class="w-full sm:flex grid sm:justify-between gap-4">
+  <section class="max-w-xs sm:mx-0 mx-auto w-full overflow-hidden flex-shrink p-4">
+    <h2 class="font-semibold text-lg uppercase  font-mono py-2 sm:text-left text-center">Mis pasatiempos</h2>
+    <div id="father_span" class="w-full flex gap-4 items-center">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/correr01.png" alt="pasatiempos">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/musica01.png" alt="pasatiempos">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/dev02.png" alt="pasatiempos">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/youtube.png" alt="pasatiempos">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/netflix.png" alt="pasatiempos">
+      <img class=" transition-all duration-[2000ms]" src="/pngs/dota.png" alt="pasatiempos">
+    </div>
+  </section>
+
+  <section class="w-full border-blue-c-01_200 border-2 rounded-2xl p-4 shadow-lg hover:shadow-xl">
+    <h2 class="py-2 text-blue-800 font-semibold text-lg uppercase  font-mono">Déjeme un mensaje</h2>
+    <div>
+      <form action="" class="flex gap-4 items-center">
+        <textarea class="resize-none block p-2.5 w-full text-sm text-gray-900 bg-blue-c-01_50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí..."></textarea>
+        <button type="submit" class="bg-blue-c-01_700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+      </form>
+    </div>
+  </section>
+</section>
+
+<script>
+  let childrenSpan = document.getElementById('father_span')!.children
+
+
+  setInterval(() => {
+    for (let i = 0; i < childrenSpan.length; i++) {
+      childrenSpan[i].classList.toggle('-translate-x-0');
+      childrenSpan[i].classList.toggle('-translate-x-[230%]');
+    }
+  }, 4000)
+
+</script>

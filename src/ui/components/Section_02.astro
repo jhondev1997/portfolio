@@ -1,0 +1,40 @@
+---
+import { Projects } from "../ReactComponents/partials/Projects";
+---
+
+<!-- Todo: =============== box 2 ========= -->
+<div class="w-full md:flex grid justify-between gap-4">
+  <div>
+    <article
+      class="w-full md:flex flex-wrap gap-4 justify-center md:max-w-[100px] h-full border-blue-c-01_300 border-2 py-4 px-2 rounded-2xl"
+    >
+      <h2 class="font-semibold font-mono text-xl underline md:text-left text-center">Tech</h2>
+      <div class="md:grid flex flex-wrap justify-center items-center min-h-full pb-6">
+        <img class="w-12" src="/svgs/tech/html.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/css.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/javascript.svg" alt="svg" />
+        <img class="w-12" src="/svgs/tech/typescript.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/sass.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/react.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/node.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/express.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/php.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/laravel.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/git.png" alt="svg" />
+        <img class="w-12" src="/svgs/tech/github.png" alt="svg" />
+      </div>
+    </article>
+  </div>
+
+  <section
+    id="section-projects"
+    class="relative pb-6 pt-4 px-2 max-w-5xl bg-gradient-to-r from-white to-blue-c-01_700 gap-4 rounded-3xl overflow-hidden text-white"
+  >
+    <h2 class="font-semibold font-mono text-blue-800 text-xl pb-2 underline">
+      Proyectos personales
+    </h2>
+    <Projects client:only="react"/>
+  </section>
+</div>
+
+

@@ -1,0 +1,84 @@
+---
+import { Description } from "../ReactComponents/partials/Description";
+import { Historial } from "../ReactComponents/partials/Historial";
+import { HistorialEstudy } from "../ReactComponents/partials/HistorialEstudy";
+---
+
+<div class="w-full md:flex grid justify-between gap-4">
+  <div class="grid gap-4 py-0.5">
+    <div
+      class="p-0.5 bg-gradient-to-r from-blue-c-01_50 to-blue-c-01_700 rounded-xl shadow-xl hover:shadow-xl"
+    >
+      <section
+        id="section-description"
+        class="relative p-4 pb-0 max-w-sm bg-white gap-4 rounded-xl overflow-hidden text-white"
+      >
+        <Description client:only />
+      </section>
+    </div>
+    <div class="p-0.5 bg-gradient-to-r from-blue-c-01_500 to-white rounded-xl shadow-lg hover:shadow-xl">
+      <section
+        id="section-historial_study"
+        class="relative grid p-4 pb-0 max-w-sm bg-white gap-4 rounded-xl overflow-hidden text-white"
+      >
+        <HistorialEstudy client:load />
+      </section>
+    </div>
+  </div>
+
+  <section
+    class="w-full max-w-2xl border bg-gradient-to-b from-blue-c-01_700 to-blue-c-01_300 p-0.5 flex rounded-2xl overflow-hidden shadow-lg hover:shadow-xl"
+  >
+    <article
+      id="section-historial"
+      class="w-full relative grid m-auto bg-white rounded-xl px-4 pt-5 justify-start align-middle overflow-hidden"
+    >
+      <Historial client:load />
+    </article>
+  </section>
+</div>
+
+<style>
+  #section-description::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(/images/bg-image-programer-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.05;
+  }
+
+  #section-historial_study::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(/images/bg-image-programer-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.05;
+  }
+
+  #section-historial::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 14px;
+    background-image: url(/images/bg-image-programer-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.05;
+  }
+</style>
