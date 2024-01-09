@@ -52,18 +52,19 @@ export const Projects: React.FC = () => {
         cover={
           <img
             alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            src="/images/chrismas-page.png"
           />
         }
         actions={[
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
+          <a target='_blank' className='hover:bg-slate-200 transition-all duration-300' href="https://github.com/jhondev1997/chrismas-page-navidad" >
+            <img className='m-auto w-5' src="/svgs/tech/github.png" alt="github" />
+          </a>,
+          <a target='_blank' href="https://superlative-crostata-7437fe.netlify.app/" >📈</a>,
         ]}
       >
         <Meta
-          title="Card title"
-          description="This is the description"
+          title="Maquetado navideño"
+          description="Hecho con Html, Sass, y Javascript; diseño base de la comunidad de Figma"
         />
       </Card>
       <Card
@@ -76,14 +77,15 @@ export const Projects: React.FC = () => {
           />
         }
         actions={[
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
+          <a target='_blank' className='hover:bg-slate-200 transition-all duration-300' href="https://github.com/jhondev1997/node-backend-music-simple/tree/main" >
+            <img className='m-auto w-5' src="/svgs/tech/github.png" alt="github" />
+          </a>,
+          
         ]}
       >
         <Meta
-          title="Card title"
-          description="This is the description"
+          title="Backen para gestionar música"
+          description="Trabajo con NodeJS, Express, MongoDB y MySQL"
         />
       </Card>
       <Card
@@ -92,18 +94,19 @@ export const Projects: React.FC = () => {
         cover={
           <img
             alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            src="/images/calculadora-proyecto.png"
           />
         }
         actions={[
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
+          <a target='_blank' className='hover:bg-slate-100 transition-all duration-300' href="https://github.com/jhondev1997/Calculadora-calculator" >
+            <img className='m-auto w-5' src="/svgs/tech/github.png" alt="github" />
+          </a>,
+          <a target='_blank' className='hover:bg-slate-100 transition-all duration-300' href="https://dreamy-faloodeh-f6897e.netlify.app/" >📈</a>,
         ]}
       >
         <Meta
-          title="Card title"
-          description="This is the description"
+          title="Calculadora simple"
+          description="Hecho con html, css y javascript"
         />
       </Card>
     </div>
