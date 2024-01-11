@@ -84,8 +84,8 @@ export const Projects: React.FC = () => {
         ]}
       >
         <Meta
-          title="Backen para gestionar música"
-          description="Trabajo con NodeJS, Express, MongoDB y MySQL"
+          title="Backend para gestionar música"
+          description="Trabajado con NodeJS, Express, MongoDB y MySQL"
         />
       </Card>
       <Card
