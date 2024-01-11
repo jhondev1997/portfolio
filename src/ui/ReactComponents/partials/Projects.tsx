@@ -32,13 +32,13 @@ export const Projects: React.FC = () => {
         cover={
           <img
             alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            src="/images/devstagram.png"
           />
         }
         actions={[
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
+          <a target='_blank' className='hover:bg-slate-200 transition-all duration-300' href="https://github.com/jhondev1997/devstagram" >
+            <img className='m-auto w-5' src="/svgs/tech/github.png" alt="github" />
+          </a>,
         ]}
       >
         <Meta
