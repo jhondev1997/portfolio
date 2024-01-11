@@ -1,36 +1,151 @@
+<head>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init("Q_Mod04LVBe0GmDyB");
+    })();
+  </script>
+  <script type="text/javascript">
+
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          // console.log(this.lastChild.previousSibling);
+          event.preventDefault();
+          this.classList.toggle('opacity-60');
+          // generate a five digit number for the contact_number variable
+          // these IDs from the previous steps
+          // emailjs.sendForm("contact_service", "contact_form", this)
+          // console.log($btnsend);
+          let form = this;
+          emailjs.sendForm("service_ux8wyay", "template_9cwnncb", this).then(
+            function () {
+              console.log("SUCCESS!");
+              setTimeout(() => {
+                form.classList.toggle('opacity-60');
+                form.reset();
+              }, 2000);
+            },
+            function (error) {
+              form.classList.toggle('opacity-60');
+              console.log("FAILED...", error);
+            }
+          );
+        });
+    };
+  </script>
+</head>
+
 <section class="w-full sm:flex grid sm:justify-between gap-4">
-  <section class="max-w-xs sm:mx-0 mx-auto w-full overflow-hidden flex-shrink p-4">
-    <h2 class="font-semibold text-lg uppercase  font-mono py-2 sm:text-left text-center">Mis pasatiempos</h2>
+  <section
+    class="max-w-xs sm:mx-0 mx-auto w-full overflow-hidden flex-shrink p-4"
+  >
+    <h2
+      class="font-semibold text-lg uppercase font-mono py-2 sm:text-left text-center"
+    >
+      Mis pasatiempos
+    </h2>
     <div id="father_span" class="w-full flex gap-4 items-center">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/correr01.png" alt="pasatiempos">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/musica01.png" alt="pasatiempos">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/dev02.png" alt="pasatiempos">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/youtube.png" alt="pasatiempos">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/netflix.png" alt="pasatiempos">
-      <img class=" transition-all duration-[2000ms]" src="/pngs/dota.png" alt="pasatiempos">
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/correr01.png"
+        alt="pasatiempos"
+      />
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/musica01.png"
+        alt="pasatiempos"
+      />
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/dev02.png"
+        alt="pasatiempos"
+      />
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/youtube.png"
+        alt="pasatiempos"
+      />
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/netflix.png"
+        alt="pasatiempos"
+      />
+      <img
+        class="transition-all duration-[2000ms]"
+        src="/pngs/dota.png"
+        alt="pasatiempos"
+      />
     </div>
   </section>
 
-  <section class="w-full border-blue-c-01_200 border-2 rounded-2xl p-4 shadow-lg hover:shadow-xl">
-    <h2 class="py-2 text-blue-800 font-semibold text-lg uppercase  font-mono">Déjeme un mensaje</h2>
+  <section
+    class="w-full border-blue-c-01_200 border-2 rounded-2xl p-4 shadow-lg hover:shadow-xl"
+  >
+    <h2 class="py-2 text-blue-800 font-semibold text-lg uppercase font-mono">
+      Déjeme un mensaje
+    </h2>
     <div>
-      <form action="" class="flex gap-4 items-center">
-        <textarea class="resize-none block p-2.5 w-full text-sm text-gray-900 bg-blue-c-01_50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe aquí..."></textarea>
-        <button type="submit" class="bg-blue-c-01_700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+      <form id="contact-form" action="" class="flex gap-4 items-center">
+        <textarea
+          name="message"
+          class="resize-none block p-2.5 w-full text-sm text-gray-900 bg-blue-c-01_50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Escribe aquí..."></textarea>
+        <button
+          type="submit"
+          id="btnSend"
+          class="bg-blue-c-01_700 text-white font-bold py-2 px-4 rounded"
+          >Enviar</button
+        >
       </form>
     </div>
   </section>
 </section>
 
 <script>
-  let childrenSpan = document.getElementById('father_span')!.children
+  // (function () {
+  //   emailjs.init("Q_Mod04LVBe0GmDyB");
+  // })();
 
+  // function handleClick(event: any) {
+  //   event.preventDefault();
+
+  //   emailjs.sendForm("service_74qqlv7", "template_sj1p7by", $form).then(
+  //     function (response) {
+  //       console.log("SUCCESS!", response.status, response.text);
+  //     },
+  //     function (error) {
+  //       console.log("FAILED...", error);
+  //     }
+  //   );
+  // }
+
+  // document.getElementById("btnSend")!.addEventListener("click", handleClick);
+
+  // const $form = document.getElementById("form-contact");
+  // const $btnHiddenSendSimulated = document.getElementById(
+  //   "btnHiddenSendSimulated"
+  // );
+
+  // const $serviceList2 = document.getElementById("categories_services");
+  // const $name = document.getElementById("contact_name");
+  // const $email = document.getElementById("contact_email");
+  // const $telephone = document.getElementById("contact_telephone");
+  // const $dni = document.getElementById("contact_dni");
+</script>
+
+<script>
+  let childrenSpan = document.getElementById("father_span")!.children;
 
   setInterval(() => {
     for (let i = 0; i < childrenSpan.length; i++) {
-      childrenSpan[i].classList.toggle('-translate-x-0');
-      childrenSpan[i].classList.toggle('-translate-x-[230%]');
+      childrenSpan[i].classList.toggle("-translate-x-0");
+      childrenSpan[i].classList.toggle("-translate-x-[230%]");
     }
-  }, 4000)
-
+  }, 4000);
 </script>

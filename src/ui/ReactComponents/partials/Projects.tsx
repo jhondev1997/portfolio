@@ -42,8 +42,8 @@ export const Projects: React.FC = () => {
         ]}
       >
         <Meta
-          title="Card title"
-          description="This is the description"
+          title="Clon sencillo de instagram"
+          description="Hecho con Laravel, Tailwind y MySQL"
         />
       </Card>
       <Card
