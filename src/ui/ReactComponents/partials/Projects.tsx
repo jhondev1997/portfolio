@@ -11,19 +11,21 @@ export const Projects: React.FC = () => {
         style={{ width: 300, cursor: 'default' }}
         cover={
           <img
+            className='sm:max-h-32 object-cover pt-3'
             alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            src="/images/ecomerce-laravel-react-inertia.png"
           />
         }
         actions={[
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
-          <a href="#" >📈</a>,
+          <a target='_blank' href="https://github.com/jhondev1997/ecomerce-salud" >
+            <img className='m-auto w-5' src="/svgs/tech/github.png" alt="github" />
+          </a>,
+          
         ]}
       >
         <Meta
-          title="Card title"
-          description="This is the description"
+          title="Ecommerce en desarrollo..."
+          description="Lo estoy desarrollando con react, laravel, mysql, inertia y tailwind"
         />
       </Card>
       <Card
